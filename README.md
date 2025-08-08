@@ -16,7 +16,7 @@ Tap the mic or one of the buttons and hear your pup’s *true* thoughts — from
 
 ### 3. Run the app
     npx expo start
-Then scan the QR code with the **Expo Go** app on your phone.
+Then scan the QR code with the **Expo Go** app on your phone, and Enjoy!
 
 ---
 
