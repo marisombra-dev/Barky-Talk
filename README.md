@@ -29,5 +29,10 @@ MIT License © 2025 marisombra-dev
 No dogs were harmed in the making of this app.
 We can’t promise your dog’s actual thoughts won’t be spicier.
 
+---
+
+👩‍💻 Author
+Created with love (and a few laughs) by Marisombra.
+If you try Barky-Talk, I’d love to hear from you — open an issue or drop a star ⭐ on the repo.
 
 
