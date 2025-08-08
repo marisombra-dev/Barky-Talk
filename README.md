@@ -1,4 +1,4 @@
-# 🐾 Barky-Talk  
+🐾 Barky-Talk  
 **Because sometimes… “woof” just isn’t enough.**  
 
 Barky-Talk is a fun little React Native + Expo app that “translates” your dog’s barks into English.  
@@ -29,7 +29,24 @@ Totally simulated, utterly silly, and way more entertaining than it has any righ
 
 ## 🚀 Getting Started  
 
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/marisombra-dev/Barky-Talk.git
-   cd Barky-Talk
+**1. Clone the repo**  
+```bash
+git clone https://github.com/marisombra-dev/Barky-Talk.git
+cd Barky-Talk
+2. Install dependencies
+
+bash
+Copy code
+npm install
+3. Run the app
+
+bash
+Copy code
+npx expo start
+Then scan the QR code with the Expo Go app on your phone.
+
+📜 License
+MIT License © 2025 marisombra-dev
+
+⚠️ Disclaimer: No dogs were harmed in the making of this app.
+We can’t promise your dog’s actual thoughts won’t be spicier.
