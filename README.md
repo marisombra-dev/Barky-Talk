@@ -34,6 +34,8 @@ We can’t promise your dog’s actual thoughts won’t be spicier.
 👩‍💻
 Created with love (and a few laughs) by Marisombra-dev.
 If you try Barky-Talk, I’d love to hear from you — open an issue or drop a star ⭐ on the repo.
-Check out my other creations (big and small) here: https://github.com/marisombra-dev
+
+Check out my other creations (big and small) [here](https://github.com/marisombra-dev) — some bark, some bite, all heart. 🐾
+
 
 
