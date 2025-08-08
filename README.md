@@ -32,7 +32,7 @@ We can’t promise your dog’s actual thoughts won’t be spicier.
 ---
 
 👩‍💻 Author
-Created with love (and a few laughs) by Marisombra.
+Created with love (and a few laughs) by Marisombra-dev.
 If you try Barky-Talk, I’d love to hear from you — open an issue or drop a star ⭐ on the repo.
 
 
