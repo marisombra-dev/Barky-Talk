@@ -1,29 +1,41 @@
 {
   "expo": {
-    "name": "barky-talk",
+    "name": "Barky Talk",
     "slug": "barky-talk",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#2d2420"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.marisombra.barkytalk"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#2d2420"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.marisombra.barkytalk",
+      "versionCode": 3,
+      "permissions": [
+        "VIBRATE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      }
+    },
+    "owner": "marisombra-dev",
+    "description": "The ultimate dog bark translator! 300+ hilarious phrases, multiple dog personalities, Chaos Mode, achievements, and rare discoveries. What is your dog REALLY thinking?"
   }
 }

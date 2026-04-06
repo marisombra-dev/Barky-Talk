@@ -1,16 +1,19 @@
 {
   "name": "barky-talk",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
+    "@react-native-async-storage/async-storage": "2.1.2",
     "expo": "~53.0.20",
+    "expo-haptics": "~14.1.5",
     "expo-linear-gradient": "~14.1.5",
     "expo-speech": "~13.1.7",
     "expo-status-bar": "~2.2.3",
@@ -22,5 +25,17 @@
     "@types/react": "~19.0.10",
     "typescript": "~5.8.3"
   },
-  "private": true
+  "private": true,
+  "description": "A hilarious dog bark translator with 300+ unique phrases, personalities, achievements, and chaos mode!",
+  "author": "Marisombra (marisombra-dev)",
+  "keywords": [
+    "dog",
+    "bark",
+    "translator",
+    "funny",
+    "pet",
+    "entertainment",
+    "react-native",
+    "expo"
+  ]
 }
