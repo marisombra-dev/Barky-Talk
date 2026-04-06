@@ -11,19 +11,19 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
-    "@react-native-async-storage/async-storage": "2.1.2",
-    "expo": "~53.0.20",
-    "expo-haptics": "~14.1.5",
-    "expo-linear-gradient": "~14.1.5",
-    "expo-speech": "~13.1.7",
-    "expo-status-bar": "~2.2.3",
-    "react": "19.0.0",
-    "react-native": "0.79.5"
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "expo": "~52.0.0",
+    "expo-haptics": "~14.0.0",
+    "expo-linear-gradient": "~14.0.0",
+    "expo-speech": "~14.0.0",
+    "expo-status-bar": "~2.0.0",
+    "react": "18.3.1",
+    "react-native": "0.76.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@types/react": "~19.0.10",
-    "typescript": "~5.8.3"
+    "@types/react": "~18.3.0",
+    "typescript": "~5.3.3"
   },
   "private": true,
   "description": "A hilarious dog bark translator with 300+ unique phrases, personalities, achievements, and chaos mode!",
