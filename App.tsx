@@ -115,15 +115,10 @@ export default function App() {
   const bounceAnim = useRef(new RNAnimated.Value(1)).current;
   const rotateAnim = useRef(new RNAnimated.Value(0)).current;
 
-  // Load saved data
+  // Load saved data before calculating the daily streak.
   useEffect(() => {
     loadSavedData();
     startPulseAnimation();
-  }, []);
-
-  // Update streak
-  useEffect(() => {
-    checkAndUpdateStreak();
   }, []);
 
   const loadSavedData = async () => {
@@ -144,32 +139,35 @@ export default function App() {
     setSoundEnabled(savedSound);
     setHapticsEnabled(savedHaptics);
     setUnlockedAchievements(savedAchievements.map(a => a.id));
-    setStats(savedStats);
+    const updatedStats = await checkAndUpdateStreak(savedStats);
+    setStats(updatedStats);
   };
 
-  const checkAndUpdateStreak = async () => {
+  const checkAndUpdateStreak = async (savedStats: AppStats): Promise<AppStats> => {
     const now = Date.now();
-    const lastOpened = stats.lastOpened;
+    const lastOpened = savedStats.lastOpened;
     const oneDay = 24 * 60 * 60 * 1000;
     
     const daysSinceLastOpen = Math.floor((now - lastOpened) / oneDay);
     
     if (daysSinceLastOpen === 1) {
       // Continued streak
-      const newStreak = stats.streakDays + 1;
+      const newStreak = savedStats.streakDays + 1;
       await storage.updateStats(s => ({ ...s, streakDays: newStreak, lastOpened: now }));
-      setStats(s => ({ ...s, streakDays: newStreak, lastOpened: now }));
+      const updatedStats = { ...savedStats, streakDays: newStreak, lastOpened: now };
       
       if (newStreak === 3) {
         await unlockAchievement('streak_3');
       }
+      return updatedStats;
     } else if (daysSinceLastOpen > 1) {
       // Streak broken
       await storage.updateStats(s => ({ ...s, streakDays: 1, lastOpened: now }));
-      setStats(s => ({ ...s, streakDays: 1, lastOpened: now }));
+      return { ...savedStats, streakDays: 1, lastOpened: now };
     } else {
       // Same day, just update last opened
       await storage.updateStats(s => ({ ...s, lastOpened: now }));
+      return { ...savedStats, lastOpened: now };
     }
   };
 
@@ -306,7 +304,7 @@ export default function App() {
     }
 
     await storage.addToHistory(barkRecord);
-    setHistory(prev => [barkRecord, ...prev].slice(0, 50));
+    setHistory(prev => [barkRecord, ...prev].slice(0, 100));
     
     await checkAchievements(barkRecord, isChaos);
     await speakBark(barkRecord.text);
@@ -328,6 +326,16 @@ export default function App() {
     if (hapticsEnabled) {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     }
+  };
+
+  const removeFavorite = async (barkText: string) => {
+    await storage.removeFavorite(barkText);
+    setFavorites(prev => prev.filter(f => f.text !== barkText));
+  };
+
+  const clearHistory = async () => {
+    await storage.clearHistory();
+    setHistory([]);
   };
 
   const shareBark = async () => {

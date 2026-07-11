@@ -96,11 +96,11 @@ Then:
 ### Android (APK/AAB)
 
 ```bash
-# Build APK for testing
-npx expo build:android -t apk
+# Build an internal Android APK for testing
+npx eas-cli build --platform android --profile preview
 
-# Build AAB for Play Store
-npx expo build:android -t app-bundle
+# Build an Android App Bundle for Google Play
+npx eas-cli build --platform android --profile production
 ```
 
 ### iOS (requires Mac + Xcode)
@@ -126,7 +126,7 @@ npx eas-cli build --platform ios
 
 ## 📋 Play Store Submission Checklist
 
-- [ ] Update `app.json` with your EAS project ID
+- [ ] Run `eas init` to connect the app to your Expo account
 - [ ] Create high-quality screenshots (phone + tablet)
 - [ ] Write Play Store description (see `play-store-assets/`)
 - [ ] Create feature graphic (1024x500)
