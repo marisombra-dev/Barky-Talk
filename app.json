@@ -30,12 +30,10 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "extra": {
-      "eas": {
-        "projectId": "barky-talk-unique-id-2024"
-      }
-    },
     "owner": "marisombra-dev",
-    "description": "The ultimate dog bark translator! 300+ hilarious phrases, multiple dog personalities, Chaos Mode, achievements, and rare discoveries. What is your dog REALLY thinking?"
+    "description": "The ultimate dog bark translator! 300+ hilarious phrases, multiple dog personalities, Chaos Mode, achievements, and rare discoveries. What is your dog REALLY thinking?",
+    "plugins": [
+      "expo-font"
+    ]
   }
 }
