@@ -30,7 +30,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "owner": "marisombra-dev",
+    "owner": "pattipur",
     "description": "The ultimate dog bark translator! 300+ hilarious phrases, multiple dog personalities, Chaos Mode, achievements, and rare discoveries. What is your dog REALLY thinking?",
     "plugins": [
       "expo-font"
